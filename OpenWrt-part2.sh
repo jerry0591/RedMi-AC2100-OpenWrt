@@ -11,10 +11,10 @@
 #
 
 #Modify default IP
-sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.99.254/g' package/base-files/files/bin/config_generate
 # 以下配置已改为固件内的defsetting服务进行设置
 # 修改设备名称
-#sed -i 's/OpenWrt/HMAC2100/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/HMAC2100/g' package/base-files/files/bin/config_generate
 # 修改时区(貌似没有起作用)
 #sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
 #sed -i "/timezone/a\\\t\tset system.@system[-1].zonename='Asia\/Shanghai'" package/base-files/files/bin/config_generate
