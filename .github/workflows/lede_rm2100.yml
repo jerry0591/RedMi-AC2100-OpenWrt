@@ -35,9 +35,6 @@ on:
         required: true
         default: rm2100.config
         type: choice
-        options: 
-          - OpenWrt.config
-          - LEDE.config
       custom_script1:
         description: feeds下载前执行
         required: true
