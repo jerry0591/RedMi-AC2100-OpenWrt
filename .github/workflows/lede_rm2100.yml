@@ -12,48 +12,13 @@ name: rm2100
 
 on:
   workflow_dispatch:
-    inputs:
-      system_name:
-        description: 系统名称
-        default: lede
-        required: true
-        type: choice
-        options:
-          - openwrt
-          - lede
-      repo_branch:
-        description: 分支
-        required: true
-        default: master
-        type: choice
-        options:
-        - master
-        - openwrt-22.03
-        - openwrt-21.02
-      config_file: rm2100.config
-  
-      custom_script1:
-        description: feeds下载前执行
-        required: true
-        default: LEDE-part1.sh
-        type: choice
-        options:
-          - OpenWrt-part1.sh
-          - LEDE-part1.sh
-      custom_script2:
-        description: feeds下载后执行
-        required: true
-        default: LEDE-part2.sh
-        type: choice
-        options:
-          - OpenWrt-part2.sh
-          - LEDE-part2.sh
+
 env:
-  SYSTEM_NAME: ${{ inputs.system_name }}
-  REPO_BRANCH: ${{ inputs.repo_branch }}
-  CONFIG_FILE: ${{ inputs.config_file }}
-  DIY_P1_SH: ${{ inputs.custom_script1 }}
-  DIY_P2_SH: ${{ inputs.custom_script2 }}
+  SYSTEM_NAME: rm2100
+  REPO_BRANCH: openwrt-21.02
+  CONFIG_FILE: rm2100.config
+  DIY_P1_SH: LEDE-part1.sh
+  DIY_P2_SH: LEDE-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
