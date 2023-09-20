@@ -30,11 +30,8 @@ on:
         - master
         - openwrt-22.03
         - openwrt-21.02
-      config_file:
-        description: 配置文件
-        required: true
-        default: rm2100.config
-        type: choice
+      config_file: rm2100.config
+  
       custom_script1:
         description: feeds下载前执行
         required: true
