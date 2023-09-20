@@ -8,14 +8,14 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: rm2100
 
 on:
   workflow_dispatch:
     inputs:
       system_name:
         description: 系统名称
-        default: openwrt
+        default: lede
         required: true
         type: choice
         options:
@@ -33,7 +33,7 @@ on:
       config_file:
         description: 配置文件
         required: true
-        default: OpenWrt.config
+        default: rm2100.config
         type: choice
         options: 
           - OpenWrt.config
@@ -41,7 +41,7 @@ on:
       custom_script1:
         description: feeds下载前执行
         required: true
-        default: OpenWrt-part1.sh
+        default: LEDE-part1.sh
         type: choice
         options:
           - OpenWrt-part1.sh
@@ -49,7 +49,7 @@ on:
       custom_script2:
         description: feeds下载后执行
         required: true
-        default: OpenWrt-part2.sh
+        default: LEDE-part2.sh
         type: choice
         options:
           - OpenWrt-part2.sh
